@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Hello World |  Welcome
+    (selenium) WebDriver定位网页元素 |  Welcome
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -30,7 +30,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-hello-world" class="article article-type-post" itemscope
+  <article id="post-6" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -38,7 +38,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Hello World
+  (selenium) WebDriver定位网页元素
 </h1>
   
 
@@ -47,8 +47,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/03/07/hello-world/" class="article-date">
-  <time datetime="2020-03-07T07:39:38.000Z" itemprop="datePublished">2020-03-07</time>
+      <a href="/2020/03/07/6/" class="article-date">
+  <time datetime="2020-03-07T10:59:16.000Z" itemprop="datePublished">2020-03-07</time>
 </a>
       
       
@@ -58,7 +58,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">73字</span>
+            <span class="post-count">1.2k字</span>
         </span>
     </span>
 
@@ -67,7 +67,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
+            <span class="post-count">5分钟</span>
         </span>
     </span>
 </div>
@@ -94,19 +94,39 @@
       
 
       
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+      <blockquote>
+</blockquote>
+<ul>
+<li>webDriver是Python 的一个用于实现web自动化的第三方库，以百度首页为例，学习元素定位。</li>
+</ul>
+<p>首先使用前端工具找到百度首页部分前端代码：</p>
+<blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  &lt;body link&#x3D;&quot;#0000cc&quot;&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;wrapper&quot; style&#x3D;&quot;display: block;&quot;&gt;</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">        &lt;div id&#x3D;&quot;head&quot;&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;head_wrapper&quot;&gt;</span><br><span class="line">                &lt;div class&#x3D;&quot;s_form&quot;&gt;</span><br><span class="line">                    &lt;div class&#x3D;&quot;s_form_wrapper soutu-env-nomac soutu-env-index&quot;&gt;</span><br><span class="line">                          &lt;div id&#x3D;&quot;lg&quot;&gt;</span><br><span class="line">                          &lt;a id&#x3D;&quot;result_logo&quot; onmousedown&#x3D;&quot;return c(&#123;&#39;fm&#39;:&#39;tab&#39;,&#39;tab&#39;:&#39;logo&#39;&#125;)&quot; href&#x3D;&quot;&#x2F;&quot;&gt;</span><br><span class="line"></span><br><span class="line">                          &lt;form id&#x3D;&quot;form&quot; class&#x3D;&quot;fm&quot; action&#x3D;&quot;&#x2F;s&quot; name&#x3D;&quot;f&quot;&gt;</span><br><span class="line">                              &lt;input type&#x3D;&quot;hidden&quot; value&#x3D;&quot;utf-8&quot; name&#x3D;&quot;ie&quot;&gt;</span><br><span class="line">                              &lt;input type&#x3D;&quot;hidden&quot; value&#x3D;&quot;8&quot; name&#x3D;&quot;f&quot;&gt;</span><br><span class="line">                              &lt;input type&#x3D;&quot;hidden&quot; value&#x3D;&quot;0&quot; name&#x3D;&quot;rsv_bp&quot;&gt;</span><br><span class="line">                              &lt;input type&#x3D;&quot;hidden&quot; value&#x3D;&quot;1&quot; name&#x3D;&quot;rsv_idx&quot;&gt;</span><br><span class="line">                              &lt;input type&#x3D;&quot;hidden&quot; value&#x3D;&quot;&quot; name&#x3D;&quot;ch&quot;&gt;</span><br><span class="line">                              &lt;input type&#x3D;&quot;hidden&quot; value&#x3D;&quot;monline_3_dg&quot; name&#x3D;&quot;tn&quot;&gt;</span><br><span class="line">                              &lt;input type&#x3D;&quot;hidden&quot; value&#x3D;&quot;&quot; name&#x3D;&quot;bar&quot;&gt;</span><br><span class="line">                              &lt;span class&#x3D;&quot;bg s_ipt_wr quickdelete-wrap&quot;&gt;</span><br><span class="line">                                   &lt;input id&#x3D;&quot;kw&quot; class&#x3D;&quot;s_ipt&quot; autocomplete&#x3D;&quot;off&quot; maxlength&#x3D;&quot;255&quot; value&#x3D;&quot;&quot; name&#x3D;&quot;wd&quot;&gt;</span><br><span class="line">                              &lt;&#x2F;span&gt;</span><br><span class="line"></span><br><span class="line">                              &lt;span class&#x3D;&quot;bg s_btn_wr&quot;&gt;</span><br><span class="line">                                   &lt;input id&#x3D;&quot;su&quot; class&#x3D;&quot;bg s_btn&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;百度一下&quot;&gt;</span><br><span class="line">                              &lt;&#x2F;span&gt;</span><br><span class="line">                              ......</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>webDriver 中元素定位方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">find_element_by_id()                    find_element_by_name()</span><br><span class="line">find_element_by_class_name()      find_element_by_tag_name()</span><br><span class="line">find_element_by_link_test()          find_element_by_partial_link_text()</span><br><span class="line">find_element_by_xpath()              find_element_by_css_selector()</span><br></pre></td></tr></table></figure>
+<h5 id="1-id-name-class-tag定位"><a href="#1-id-name-class-tag定位" class="headerlink" title="1.id/name/class/tag定位"></a>1.id/name/class/tag定位</h5><p>例如百度输入框：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2099955-88359d08611d810c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>我们可以使用它的各种属性进行定位： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">find_element_by_id(&quot;kw&quot;)  </span><br><span class="line">find_element_by_name(&quot;wd&quot;)</span><br><span class="line">find_element_by_class_name(&quot;s_ipt&quot;) </span><br><span class="line">find_element_by_tag_name(&quot;input&quot;)  -- 但是下查看前端会发现大量&lt;div&gt;、&lt;input&gt;、&lt;a&gt;等标签，所以很难通过by_tag_name找到准确的定位，适用于批量定位。</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h5 id="2-link-partial-link-定位："><a href="#2-link-partial-link-定位：" class="headerlink" title="2.link/partial link 定位："></a>2.link/partial link 定位：</h5><p>link定位是专门用来定位<strong><em>文本连接</em></strong> 的。比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class&#x3D;&quot;mnav&quot; name&#x3D;&quot;tj_trvideo&quot; href&#x3D;&quot;http:&#x2F;&#x2F;v.baidu.com&quot;&gt;视频&lt;&#x2F;a&gt;</span><br><span class="line">&lt;a class&#x3D;&quot;mnav&quot; name&#x3D;&quot;tj_trtieba&quot; href&#x3D;&quot;http:&#x2F;&#x2F;tieba.baidu.com&quot;&gt;贴吧&lt;&#x2F;a&gt;</span><br><span class="line">&lt;a class&#x3D;&quot;bri&quot; style&#x3D;&quot;display: block;&quot; name&#x3D;&quot;tj_briicon&quot; href&#x3D;&quot;http:&#x2F;&#x2F;www.baidu.com&#x2F;more&#x2F;&quot;&gt;更多产品&lt;&#x2F;a&gt;</span><br><span class="line"></span><br><span class="line">------------------------------------------</span><br><span class="line"></span><br><span class="line">find_element_by_link_test(&quot;视频&quot;)   </span><br><span class="line">#当文本比较长的时候，我们可以取文本的一部分，只要这部分信息可以唯一标识这个连接就行：</span><br><span class="line">find_element_by_partial_link_text(&quot;更多&quot;)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h5 id="3-XPath定位"><a href="#3-XPath定位" class="headerlink" title="3.XPath定位"></a>3.XPath定位</h5><p>例：（百度输入框和搜索框定位）<br>●绝对路径定位<br> <code>find_element_by_xpath(&quot;/html/body/div/div/div/div/div/form/span/input&quot;)</code><br><code>find_element_by_xpath(&quot;/html/body/div/div/div/div/div/form/span[2]/input&quot;)</code><br>如果一个层级下有多个相同标签名，按上下顺序确定是第几个，如：span[2] 第二个表示搜索框<br>●元素属性定位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find_element_by_xpath(&quot;&#x2F;&#x2F;input[@id&#x3D;&#39;kw&#39;]&quot;)</span><br><span class="line">find_element_by_xpath(&quot;&#x2F;&#x2F;input[@id&#x3D;&#39;su&#39;]&quot;)</span><br><span class="line">find_element_by_xpath(&quot;&#x2F;&#x2F;*[@id&#x3D;&#39;su&#39;]&quot;)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>//表示当前页面某个目录下，input是元素标签名，[@id=’kw’]表示元素的id属性，这里可以使用元素的任意属性名，只要能唯一识别该元素，如果不想指定标签名可以用*号代替<br>●层级属性结合<br>如果一个元素没有任何可以唯一标识的属性，可以找到他的上一级元素（上级没有找上上级…）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">find_element_by_xpath(&quot;&#x2F;&#x2F;span[@class&#x3D;&#39;bg s_ipt_wr&#39;]&#x2F;input&quot;)</span><br><span class="line">find_element_by_xpath(&quot;&#x2F;&#x2F;span[@class&#x3D;&#39;bg s_btn&#39;]&#x2F;input&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>● 使用逻辑运算符<br>如果一个属性不能唯一区分一个元素，可以用逻辑运算符 ‘and’ 连接多个属性定位元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">find_element_by_xpath(&quot;&#x2F;&#x2F;input[@id&#x3D;&#39;kw&#39; and @class&#x3D;&#39;s_ipt&#39;]&quot;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-CSS定位"><a href="#4-CSS定位" class="headerlink" title="4.CSS定位"></a>4.CSS定位</h5><p>1.通过(.)号进行class属性定位，(#)号进行id属性定位：<br><code>find_element_by_css_selector(&quot;.s_ipt&quot;)</code><br><code>find_element_by_css_selector(&quot;#kw&quot;)</code><br>2.通过标签名定位<br><code>find_element_by_css_selector(&quot;input&quot;)  #标签名重复概率大，适用定位一组元素</code><br>3.通过父子关系定位<br><code>find_element_by_css_selector(&quot;span&gt;input&quot;)</code><br>4.通过属性定位<br><code>find_element_by_css_selector(&quot;autocomplete=off&quot;)</code><br>5.组合定位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find_element_by_css_selector(&quot;form.fm&gt;span&gt;input.s_ipt&quot;)</span><br><span class="line">#class属性为fm的form标签-&gt;span标签-&gt;标签名为input、class属性为s_ipt 的元素。</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>WebDriver的8种定位方法还提供了统一的调用方法：find_element() 方法。通过By声明定位方法，再 传入响应的定位参数：<br>使用By之前导入By类：<br><code>form selenium.webdriver.common.by import By</code><br><code>find_element(By.ID, &quot;kw&quot;)</code><br><code>find_element(By.NAME, &quot;wd&quot;)</code><br><code>...</code></p>
 
       
       <!-- reward -->
@@ -176,7 +196,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lanjingrs.github.io/2020/03/07/hello-world/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lanjingrs.github.io/2020/03/07/6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -190,6 +210,25 @@
 
   
   
+  <nav class="article-nav">
+    
+      <a href="/2020/03/07/5/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            (xx) mac文件夹加密
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2020/03/07/7/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">(selenium) 浏览器控制</div>
+      </a>
+    
+  </nav>
+
 
   
 
@@ -263,10 +302,10 @@
       </li>
       <li>
         
-        Powered by
+        我真
         
         
-        <a href="https://hexo.io" target="_blank">Hexo</a> ★ <a href="" target="_blank">蓝~</a>
+        <a target="_blank">帅!</a> ★ <a href="" target="_blank">蓝~</a>
         
       </li>
     </ul>
